@@ -1,13 +1,22 @@
 {
-  "name": "play",
+  "name": "PlayTube",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "a backend with full of features for a video sharing platform",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "keywords": [],
   "author": "Nitin",
   "license": "ISC",
-  "type": "commonjs"
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "prettier": "^3.10.1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mongoose": "^9.12.1"
+  }
 }
