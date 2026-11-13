@@ -9,13 +9,15 @@ dotenv.config({
 
 connectDB()
     .then(() => {
-        // Jab app.js bana loge tab yahan app.listen() chalega
-        console.log("Database connected, ready to start server!");
+        app.listen(process.env.PORT || 8000, () => {
+            console.log(`Server is running at port : $
+                {process.env.PORT}`
+            );
+        })
     })
     .catch((err) => {
-        console.log("MONGO db connection failed !!! ", err);
-    });
-
+        console.log("MONGODB Connection failed", err);
+    })
 
 
 
